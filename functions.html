@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Reverse and sort alphabet</title>
+</head>
+
+<body>
+   <script>
+      function reverseInt() {
+         var a = prompt("enter the number");
+         reverse = "";
+         var negg=0;
+         if(a[0]=='-'){
+            negg=1;
+         }
+         for (i = a.length - 1; i >= 0; i--) {
+            reverse += a[i];
+         }
+         if(negg==1){
+            alert(a+" reversed to  "+parseInt(reverse) * -1);
+         }else{
+            alert(a+" reversed to  "+parseInt(reverse));
+         }
+
+      }
+      reverseInt();
+
+      function alphaOrder() {
+         var str = prompt("enter the string ");
+         sorted = [];
+         for (i = 0; i < str.length; i++) {
+            sorted[i] = str[i];
+         }
+         sorted.sort();
+         strnew = sorted[0];
+         for (i = 1; i < sorted.length; i++) {
+            strnew += sorted[i];
+         }
+
+         alert(str+" sorted to "+strnew);
+      }
+      alphaOrder();
+   </script>
+
+
+</body>
+
+</html>
